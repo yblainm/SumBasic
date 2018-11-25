@@ -1,0 +1,27 @@
+Pinochet is awaiting a hearing, his fate in the balance.
+The rest of the differences were not significant.
+The reaction of the Chilean people was mixed.
+This is not surprising, given the small number of test points.
+Here, we examine the impact of frequency on various aspects of summarization and the role of frequency in the design of a summarization system.
+Castro criticized the arrest, and called it unprecedented international meddling.
+Similarly, of the top 5 content units, 96% appeared in a human summary across the 11 sets.
+Figure 1: Summaries produced for the same input by SumBasic and by a human.
+A summary produced by SumBasic, alongside a human summary for the same set is shown in figure 1.
+We first discuss the impact of frequency in the input at the word level, and then look at frequency at a semantic level, using semantic content units.
+The overall probability of the summary then is N!
+The more people agree that a certain SCU should be included in a summary, the more important this SCU is.
+Step 2 For each sentence Sj in the input, assign a weight equal to the average probability of the words in the sentence, i.e.
+In section 3, we discuss SumBasic, a summarization system that we created to exploit frequency exclusively, in order to isolate the contribution of frequency.
+We thus set out to construct a summarization system that exploits frequency information exclusively, in order to isolate the contribution of frequency information.
+Steps 2 and 3 enforce the desired properties of the summarizer discussed in the previous section.
+But will they be words that the humans will agree on, and that will appear in many human summaries?
+It is obvious that the high-frequency words will be those with high-probability in the input.
+The update of word probability gives a natural way to deal with the redundancy in the multidocument input.
+That is, for each word w in the input vocabulary, we associate a probability p(w) for it to be emitted into a summary.
+In our study of frequency and human summarization, we found that content units and words that are repeated often in the input will very likely be mentioned in a human summary.
+For each set, NIST provided four humanwritten summaries and the submissions of all participating automatic summarizers.
+One system was significantly better than SumBasic, and for each of the automatic metrics there were two systems that were significantly worse than SumBasic.
+In this paper, we study the association of frequency of words and content units in the input and the likelihood with which they will appear in a human summary (see section 2).
+American scholars applauded the arrest, saying that it set a precedent for other terrorist dictators.
+Here, in order to qualify the frequency of words, we used the probability of a word in an input set—n N , where n is the number of times the word occurred in the input (its frequency) and N is the number of all words in the input.
+

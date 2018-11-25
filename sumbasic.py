@@ -20,7 +20,7 @@ def getDocuments(paths):
     return docs, docs_tokens
 
 
-def sumBasic(documents, docs_tokens, method='orig', length=350):
+def sumBasic(documents, docs_tokens, method='orig', length=100):
     # Get probs
     probs = defaultdict(int)
     sentprobs = defaultdict(int)
@@ -51,7 +51,7 @@ def sumBasic(documents, docs_tokens, method='orig', length=350):
         for i in range(0, len(documents)):
             doc = documents[i]
             for j in range(0, len(doc)):
-                sent = set(docs_tokens[i][j])
+                sent = docs_tokens[i][j]
                 for token in sent:
                     sentprobs[doc[j]] += probs[token]/len(sent)
 
@@ -82,7 +82,8 @@ def sumBasic(documents, docs_tokens, method='orig', length=350):
         result += sent+"\n"
 
         if method != METHODS[0]: # simple no redundancy
-            probs[most_prob_word] **= 2
+            for word in word_tokenize(sent):
+                probs[word] **= 2
 
         # print([len(doc) for doc in docs], docs)
 
@@ -101,7 +102,7 @@ if __name__ == '__main__':
     docs, docs_tokens = getDocuments(docpaths)
 
     if method in METHODS:
-        print(sumBasic(docs, docs_tokens, method=method))
+        print(sumBasic(docs, docs_tokens, method=method).replace('\u200b', ''))
     else:
         print("Method must be one of 'best-avg', 'simplified', or 'orig', got {}.".format(method))
         quit(1)
