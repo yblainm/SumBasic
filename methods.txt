@@ -1,0 +1,4 @@
+simplified
+orig
+best-avg
+leading
