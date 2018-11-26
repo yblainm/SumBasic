@@ -1,9 +1,11 @@
 import sys, nltk
 from collections import defaultdict
 from nltk.tokenize import sent_tokenize, word_tokenize
+from nltk.corpus import stopwords
 
 
 METHODS = ['simplified', 'best-avg', 'orig', 'leading']
+stops = stopwords('english')
 
 
 def getDocuments(paths):
